@@ -1,5 +1,5 @@
-import { NextResponse } from "'next/server'"
-import { FitnessInsight } from "'../../../types/exerciseTypes'"
+import { NextResponse } from "next/server"
+import { FitnessInsight } from "@/types/exerciseTypes"
 
 let fitnessInsights: FitnessInsight[] = []
 

@@ -1,6 +1,6 @@
 import { Exercise } from "@/types/exerciseTypes"
-import { exercises } from "@/app/api/exercise-config/route"
+import { exerciseStore } from "@/data/exercises"
 
 export function getExerciseById(id: string): Exercise | undefined {
-  return exercises.find(ex => ex.exerciseId === id)
+  return exerciseStore.getExerciseById(id)
 } 

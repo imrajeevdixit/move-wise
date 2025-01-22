@@ -6,10 +6,10 @@ import Image from "next/image"
 import { Exercise } from "@/types/exerciseTypes"
 import { ExerciseCarousel } from "../components/ExerciseCarousel"
 import { headers } from 'next/headers'
-import { exercises } from './api/exercise-config/route'
+import { exerciseStore } from "@/data/exercises"
 
-async function getExercises(): Promise<Partial<Exercise>[]> {
-  return exercises.map(({ exerciseId, name, description, image }) => ({
+async function getExercises() {
+  return exerciseStore.getAllExercises().map(({ exerciseId, name, description, image }) => ({
     exerciseId,
     name,
     description,
